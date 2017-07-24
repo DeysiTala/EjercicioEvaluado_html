@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Reserva de Pasajes</title>
 </head>
 <center>
     
@@ -60,12 +60,12 @@
     <br>
 
     <label >DNI : </label>
-    <input type="number"><button type="text" onclick="buscarDni();">Buscar</button><br><br>
+    <input type="number" id="searchDNI"><button type="text" onclick="buscarDni();">Buscar</button><br><br>
     
        
-    <label>Nombre : <input type="text" id= "Name" name = "Name" /></label>
-    <label>Apellido : <input type="text" id="LastName" name = "LastName" /></label>
-    <label>DNI : <input type="text" id="dni" name = "dni" /></label>
+    <label>Nombre : <input type="text" id= "Name" name = "Name" placeholder="Ingresa tu nombre" /></label>
+    <label>Apellido : <input type="text" id="LastName" name = "LastName" placeholder="Ingresa tu apellido" /></label>
+    <label>DNI : <input type="text" id="dni" name = "dni" placeholder="DNI" /></label>
     <br>
     <br>
     <button type="text" onclick="reservar();">Reservar</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

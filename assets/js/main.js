@@ -27,6 +27,8 @@ function reservar(){
  
  var datitos2 = new datitos(nombres,apellido,dnis,asientito)
  numeroAsiento.push(datitos2);
+
+ limpiar();
   //console.log(numeroAsiento);
   }
 
@@ -40,11 +42,12 @@ function datitos(nombres,apellido,dnis,numeroAsientos){
 
 function limpiar(){
 
-	document.getElementById("Name").value = "";
-	document.getElementById("LastName").value = "";
-	document.getElementById("dni").value = "";
+	  document.getElementById("Name").value = "";
+	  document.getElementById("LastName").value = "";
+	  document.getElementById("dni").value = "";
     document.getElementById("datos").innerHTML = "";
     document.getElementById("tdatos").innerHTML = "";
+    document.getElementById("mostrar").innerHTML = "";
 	
 }
 
@@ -70,8 +73,20 @@ document.getElementById("tdatos").innerHTML= html;
 }
 
 function buscarDni(dnis){
- 
+  var searchDNI = document.getElementById("searchDNI").value;
+for(var i =0; i<numeroAsiento.length;i++) {
 
+  var listaDNI=numeroAsiento[i].dnis;
+
+if(searchDNI ==listaDNI){
+
+ document.getElementById("Name").value = numeroAsiento[i].nombres;
+ document.getElementById("LastName").value = numeroAsiento[i].apellido;
+ document.getElementById("dni").value = numeroAsiento[i].dnis
+ document.getElementById("mostrar").textContent = numeroAsiento[i].nAsiento;
+}
+
+}
 
   
 }
